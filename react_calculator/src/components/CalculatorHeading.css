@@ -1,0 +1,11 @@
+.text-style {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: #4b5563;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  text-align: center;
+}
