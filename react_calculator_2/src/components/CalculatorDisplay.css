@@ -1,0 +1,15 @@
+.display {
+  margin: 10px 0;
+  width: 90%;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: right;
+  padding: 10px;
+  border: 2px solid #0d6efd;
+  background-color: #e9ecef;
+  color: black;
+  box-sizing: border-box;
+  outline: none; /* Remove extra blue outline */
+}

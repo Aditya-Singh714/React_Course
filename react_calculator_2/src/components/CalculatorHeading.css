@@ -1,0 +1,12 @@
+.text-style {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #0d6efd; /* Bootstrap primary */
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+}
