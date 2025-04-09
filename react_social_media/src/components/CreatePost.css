@@ -1,0 +1,23 @@
+.create-post-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.create-post-form {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.create-post-form:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-form input,
+.create-post-form textarea {
+  border-radius: 8px;
+}
+
+.create-post-form button {
+  border-radius: 8px;
+}

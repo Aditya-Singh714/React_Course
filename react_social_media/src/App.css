@@ -1,0 +1,11 @@
+#root {
+  background-color: #222222;
+}
+
+.app_container {
+  display: flex;
+}
+
+.content {
+  width: 100%;
+}
