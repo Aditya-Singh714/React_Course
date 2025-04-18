@@ -1,0 +1,63 @@
+.welcome-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f1f3f4;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.welcome-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222831;
+  animation: slideIn 1s ease-out;
+}
+
+.welcome-subtext {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.fetch-button {
+  background-color: #00adb5;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 173, 181, 0.3);
+}
+
+.fetch-button:hover {
+  background-color: #007f85;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 173, 181, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

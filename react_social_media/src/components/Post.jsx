@@ -10,7 +10,7 @@ const Post = ({ post }) => {
   return (
     <div className="card post-card shadow-sm mb-4">
       <img
-        src={`https://source.unsplash.com/600x200/?blog,technology`}
+        src={`https://source.unsplash.com/600x200/?blog`}
         className="card-img-top"
         alt="Post thumbnail"
       />
@@ -26,7 +26,7 @@ const Post = ({ post }) => {
             <AiFillDelete size={20} />
           </span>
         </h4>
-        <p className="card-text">{post.content}</p>
+        <p className="card-text">{post.body}</p>
 
         <div className="mb-3">
           {post.tags.map((tag) => (

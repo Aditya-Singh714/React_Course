@@ -3,6 +3,7 @@ import { createContext, useReducer } from "react";
 export const PostListContext = createContext({
   postCard: [],
   addPost: () => {},
+  addInitialPosts: () => {},
   removePost: () => {},
 });
 
@@ -14,6 +15,8 @@ const postCardReducer = (currPostCard, action) => {
     );
   } else if (action.type === "ADD_POST") {
     newPostCard = [action.payload, ...currPostCard];
+  } else if (action.type === "ADD_INITIAL_POSTS") {
+    newPostCard = action.payload.posts;
   }
   return newPostCard;
 };
@@ -40,6 +43,15 @@ const PostListProvider = ({ children }) => {
     });
   };
 
+  const addInitialPosts = (posts) => {
+    dispatchPostCard({
+      type: "ADD_INITIAL_POSTS",
+      payload: {
+        posts,
+      },
+    });
+  };
+
   const removePost = (postId) => {
     dispatchPostCard({
       type: "REMOVE_POST",
@@ -49,55 +61,15 @@ const PostListProvider = ({ children }) => {
     });
   };
 
-  const [postCard, dispatchPostCard] = useReducer(
-    postCardReducer,
-    DEFAULT_POST_LIST
-  );
+  const [postCard, dispatchPostCard] = useReducer(postCardReducer, []);
 
   return (
-    <PostListContext.Provider value={{ postCard, addPost, removePost }}>
+    <PostListContext.Provider
+      value={{ postCard, addPost, removePost, addInitialPosts }}
+    >
       {children}
     </PostListContext.Provider>
   );
 };
-
-const DEFAULT_POST_LIST = [
-  {
-    id: 1,
-    title: "Exploring the Mountains",
-    content:
-      "A detailed guide on hiking through the Rocky Mountains during spring.",
-    reactions: {
-      likes: 54,
-      dislikes: 3,
-    },
-    userId: "user-120",
-    tags: ["travel", "hiking", "nature"],
-  },
-  {
-    id: 2,
-    title: "JavaScript Async Explained",
-    content:
-      "Understanding promises, async/await, and how to handle asynchronous code in JS.",
-    reactions: {
-      likes: 120,
-      dislikes: 7,
-    },
-    userId: "user-121",
-    tags: ["javascript", "webdev", "async"],
-  },
-  {
-    id: 3,
-    title: "Top 5 Productivity Apps in 2025",
-    content:
-      "A rundown of the most efficient and feature-rich productivity tools this year.",
-    reactions: {
-      likes: 98,
-      dislikes: 4,
-    },
-    userId: "user-122",
-    tags: ["productivity", "apps", "review"],
-  },
-];
 
 export default PostListProvider;
