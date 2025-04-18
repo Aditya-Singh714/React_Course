@@ -1,0 +1,79 @@
+/* Background */
+.app-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #0f1115, #07080a);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 30px;
+}
+
+/* Clock Title */
+.clock-title {
+  font-size: 2.5rem;
+  color: #00f2ff;
+  text-shadow: 0 0 12px #00f2ff88;
+}
+
+/* Subtitle */
+.clock-subtitle {
+  color: #b0b0b0;
+  font-weight: 300;
+}
+
+/* Analog Clock Container */
+.analog-clock {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border: 6px solid #00f2ff;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1c1f25, #14171c);
+  box-shadow: 0 0 30px #00f2ff33;
+}
+
+/* Center Dot */
+.center-point {
+  width: 12px;
+  height: 12px;
+  background: #00f2ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0 0 12px #00f2ff;
+}
+
+/* Common Hand Style */
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  background: #ffffff;
+  border-radius: 6px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Specific Hands */
+.hour-hand {
+  height: 60px;
+  width: 6px;
+  background: #ffc107;
+  z-index: 3;
+}
+
+.minute-hand {
+  height: 90px;
+  width: 4px;
+  background: #00e6e6;
+  z-index: 2;
+}
+
+.second-hand {
+  height: 100px;
+  width: 2px;
+  background: #ff3c6f;
+  z-index: 1;
+}
